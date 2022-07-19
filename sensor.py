@@ -1,7 +1,7 @@
 from gpiozero import DistanceSensor
 from time import sleep
 
-threshold_distance=0.2
+threshold_distance=20
 sensor = DistanceSensor(echo=18, trigger=17,max_distance=2, threshold_distance=0.2)
 while True:
     d= sensor.distance *100 #distance in cm
