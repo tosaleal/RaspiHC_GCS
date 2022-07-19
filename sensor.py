@@ -7,7 +7,7 @@ sensor = DistanceSensor(echo=18, trigger=17,max_distance=2, threshold_distance=0
 while True:
     d= sensor.distance *100 #distance in cm
     #condition to send alert
-    if (d<=threshold_distance):
+    if (d<=td):
         print('Full bin')
     else:
         print('Distance: ', round(sensor.distance * 100,3),sensor.when_out_of_range)
