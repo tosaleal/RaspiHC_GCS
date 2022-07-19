@@ -6,5 +6,5 @@ while True:
     d= sensor.distance *100 #distance in cm
     #condition to send alert
     
-    print('Distance: ', sensor.distance * 100,sensor.when_in_range)
+    print('Distance: ', sensor.distance * 100,sensor.when_out_of_range)
     sleep(1)
