@@ -1,11 +1,9 @@
-from gpiozero import DistanceSensor
+import gpiozero as gpio
 from time import sleep
 
-#pin definition
-trig = 2
-echo = 3
 
-sensor = DistanceSensor(3,2)
+
+sensor = gpio.DistanceSensor(trig=3,echo=2)
 
 while True:
     print('Distance: ',sensor.distance*100)
