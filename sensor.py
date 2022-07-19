@@ -1,7 +1,8 @@
 from gpiozero import DistanceSensor
 from time import sleep
 
-threshold_distance=20
+td=20 #threshold distance in cm
+t=15 #time for reading sensor
 sensor = DistanceSensor(echo=18, trigger=17,max_distance=2, threshold_distance=0.2)
 while True:
     d= sensor.distance *100 #distance in cm
@@ -9,5 +10,5 @@ while True:
     if (d<=threshold_distance):
         print('Full bin')
     else:
-        print('Distance: ', sensor.distance * 100,sensor.when_out_of_range)
-    sleep(1)
+        print('Distance: ', round(sensor.distance * 100,3),sensor.when_out_of_range)
+    sleep(t) #reads every t seconds
