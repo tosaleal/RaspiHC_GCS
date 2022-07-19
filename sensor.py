@@ -3,7 +3,7 @@ from time import sleep
 
 
 
-sensor = gpio.DistanceSensor(trig=3,echo=2)
+sensor = gpio.DistanceSensor(3,2)
 
 while True:
     print('Distance: ',sensor.distance*100)
